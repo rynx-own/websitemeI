@@ -1,6 +1,22 @@
 // Main JavaScript for Portfolio Website
 
 document.addEventListener('DOMContentLoaded', function() {
+    // Loading Screen
+    const loadingScreen = document.getElementById('loadingScreen');
+    
+    // Hide loading screen after page loads
+    window.addEventListener('load', function() {
+        setTimeout(function() {
+            loadingScreen.classList.add('hidden');
+        }, 1500);
+    });
+    
+    // Fallback: hide loading screen after 3 seconds max
+    setTimeout(function() {
+        if (loadingScreen && !loadingScreen.classList.contains('hidden')) {
+            loadingScreen.classList.add('hidden');
+        }
+    }, 3000);
     // Set current year in footer
     document.getElementById('currentYear').textContent = new Date().getFullYear();
     
