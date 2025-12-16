@@ -1136,3 +1136,84 @@ h1, h2, h3, h4, h5, h6 {
         align-self: flex-start;
     }
 }
+
+/* Scroll Down Text */
+.scroll-text {
+    font-size: 0.9rem;
+    font-weight: 500;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+    color: var(--purple);
+}
+
+/* Scroll Animation Classes */
+.animate-on-scroll {
+    opacity: 0;
+    transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.animate-on-scroll.visible {
+    opacity: 1;
+}
+
+/* Zoom In Animation */
+.zoom-in {
+    transform: scale(0.8);
+}
+
+.zoom-in.visible {
+    transform: scale(1);
+}
+
+/* Fade Up Animation */
+.fade-up {
+    transform: translateY(40px);
+}
+
+.fade-up.visible {
+    transform: translateY(0);
+}
+
+/* Slide In Left Animation */
+.slide-in-left {
+    transform: translateX(-60px);
+}
+
+.slide-in-left.visible {
+    transform: translateX(0);
+}
+
+/* Slide In Right Animation */
+.slide-in-right {
+    transform: translateX(60px);
+}
+
+.slide-in-right.visible {
+    transform: translateX(0);
+}
+
+/* Scale Up Animation */
+.scale-up {
+    transform: scale(0.7);
+}
+
+.scale-up.visible {
+    transform: scale(1);
+}
+
+/* Rotate In Animation */
+.rotate-in {
+    transform: rotate(-10deg) scale(0.9);
+}
+
+.rotate-in.visible {
+    transform: rotate(0) scale(1);
+}
+
+/* Staggered Animation Delays */
+.animate-on-scroll:nth-child(1) { transition-delay: 0s; }
+.animate-on-scroll:nth-child(2) { transition-delay: 0.1s; }
+.animate-on-scroll:nth-child(3) { transition-delay: 0.2s; }
+.animate-on-scroll:nth-child(4) { transition-delay: 0.3s; }
+.animate-on-scroll:nth-child(5) { transition-delay: 0.4s; }
